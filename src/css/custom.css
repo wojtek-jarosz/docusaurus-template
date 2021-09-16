@@ -6,6 +6,9 @@
  */
 
 /* You can override the default Infima variables here. */
+
+@import "modules/notes.css";
+
 :root {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: rgb(33, 175, 144);
@@ -60,4 +63,18 @@ table {
 
 .markdown {
     --ifm-h1-vertical-rhythm-top: 0; 
+}
+
+.anchor_top_offset::before {
+    top: calc(var(--ifm-navbar-height) * -1);
+    content: '';
+    display: block;
+    height: calc(var(--ifm-navbar-height));
+    margin-top: calc(var(--ifm-navbar-height) * -1);
+    visibility: hidden;
+}
+
+/* Wrap long lines of text in codeblocks */
+code {
+  white-space: pre-wrap;
 }
