@@ -36,6 +36,11 @@ table {
     margin-bottom: 0px;
 }
 
+.ph.cmd {
+  font-family: revert;
+  background-color: unset;
+}
+
 .pre {
   background-color: var(--ifm-pre-background);
   border-radius: var(--ifm-pre-border-radius);
@@ -50,7 +55,7 @@ table {
   white-space: pre-wrap;
 }
 
-.ph {
+.ph:not(.b):not(.i):not(.u) {
     display: inline;
     background-color: var(--ifm-pre-background);
     border-radius: var(--ifm-pre-border-radius);
